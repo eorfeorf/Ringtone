@@ -8,11 +8,19 @@ namespace Ringtone.Notes
 {
     public class BaseNote : MonoBehaviour, IJudgeable
     {
-        public IReadOnlyReactiveProperty<bool> IsJudge { get; }
+        public IReadOnlyReactiveProperty<bool> IsJudge => isJudge;
+        private readonly ReactiveProperty<bool> isJudge = new ReactiveProperty<bool>();
+        public Type Type => type;
+        private Type type;
 
-        public Rank Judge()
+        public void Initialize(Type type)
         {
-            return Rank.Perfect;
+            this.type = type;
+        }
+
+        public virtual Rank Judge()
+        {
+            return Rank.Miss;
         }
     }
 }
