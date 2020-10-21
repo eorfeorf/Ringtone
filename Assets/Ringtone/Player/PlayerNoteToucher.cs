@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Ringtone.Judge;
 using Ringtone.Player.Input;
+using Ringtone.Touch;
 using UniRx;
 using UnityEngine;
 
 namespace Ringtone.Player
 {
-    public class PlayerNoteJudge : MonoBehaviour
+    public class PlayerNoteToucher : MonoBehaviour
     {
-        public IReadOnlyReactiveProperty<IJudgeable> CurrentJudge;
+        public IReadOnlyReactiveProperty<ITouchable> CurrentTouch;
         
         private IInputEventProvider inputEventProvider;
 
@@ -18,12 +18,7 @@ namespace Ringtone.Player
         {
             inputEventProvider = provider;
         }
-
-        public void Touch()
-        {
-            
-        }
-
+        
         private void Awake()
         {
             inputEventProvider.Touch.Subscribe(touchPos =>
