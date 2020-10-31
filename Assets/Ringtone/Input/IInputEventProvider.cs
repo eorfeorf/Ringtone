@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
 
 
-namespace Ringtone.Player.Input
+namespace Ringtone.Input
 {
     public interface IInputEventProvider
     {
