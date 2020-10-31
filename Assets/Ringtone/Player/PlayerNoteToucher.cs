@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Ringtone.Player.Input;
+﻿using Ringtone.Input;
 using Ringtone.Touch;
 using UniRx;
 using UnityEngine;
@@ -24,7 +21,7 @@ namespace Ringtone.Player
             inputEventProvider.Touch.Subscribe(touchPos =>
             {
                 // タッチしたら判定する.
-                
+                Debug.Log("Touch!");
             }).AddTo(this);
         }
     }
