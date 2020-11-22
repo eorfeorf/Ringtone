@@ -8,11 +8,12 @@ using UnityEngine.Assertions;
 
 namespace Ringtone.Notes
 {
-    public class NoteTap : BaseNote
-    {    
-        public override Rank Judge()
+    public sealed class NoteTap : BaseNote
+    {
+        public override void Judge()
         {
-            return Rank.Perfect;
+            isJudge.Value = Rank.Perfect;
+            Destroy(gameObject);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Ringtone.Notes
 {
     public class NoteLong : BaseNote
     {
-        public override Rank Judge()
+        public override void Judge()
         {
             throw new System.NotImplementedException();
         }

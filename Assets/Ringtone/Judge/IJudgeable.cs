@@ -6,9 +6,16 @@ using UnityEngine;
 
 namespace Ringtone.Judge
 {
+    /// <summary>
+    /// 判定を行うインターフェイス。
+    /// </summary>
     public interface IJudgeable
     {
-        IReadOnlyReactiveProperty<bool> IsJudge { get; }
-        Rank Judge();
+        /// <summary>
+        /// true:判定前
+        /// false:判定後
+        /// </summary>
+        IReadOnlyReactiveProperty<Rank> IsJudge { get; }
+        void Judge();
     }
 }
