@@ -18,10 +18,12 @@ namespace Ringtone.Player
         
         private void Awake()
         {
+            inputEventProvider = GameObject.Find("InputEventProvider").GetComponent<IInputEventProvider>();
+            
             inputEventProvider.Touch.Subscribe(touchPos =>
             {
                 // タッチしたら判定する.
-                Debug.Log("Touch!");
+                Debug.Log("Note Touch!");
             }).AddTo(this);
         }
     }

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d20a7c4d75d3734787514dc82b35cb0, type: 3}
   m_Name: NotePrefabs
   m_EditorClassIdentifier: 
-  Notes: []
+  Notes:
+  - {fileID: 0}
+  - {fileID: 0}
