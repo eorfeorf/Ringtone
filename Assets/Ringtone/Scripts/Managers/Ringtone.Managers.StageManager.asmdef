@@ -1,3 +1,16 @@
 {
-	"name": "Ringtone.Managers.StageManager"
+    "name": "Ringtone.Managers.StageManager",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2bc5beaac9cf23b4e94ee79cb4702ed0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

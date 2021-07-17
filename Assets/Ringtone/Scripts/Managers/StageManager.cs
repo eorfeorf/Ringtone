@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using Ringtone.Managers.Internal;
+using Ringtone.Scripts.MusicScore;
 using UnityEngine;
 
-namespace Ringtone.Managers
+namespace Ringtone.Scripts.Managers
 {
     public class StageManager : MonoBehaviour
     {
-        private readonly IStageTimeManager stageTimeManager;
+        private readonly IStageTimeManager stageTimeManager = new StageTimeManager();
+        private readonly NoteDataLoader noteDataLoader = new NoteDataLoader();
         
-
-        public StageManager(StageTimeManager stageTimeManager)
+        private int musicScoreId;
+        
+        public StageManager(int musicScoreId)
         {
-            this.stageTimeManager = stageTimeManager;
+            this.musicScoreId = musicScoreId;
         }
 
         public void StageStart()
         {
             stageTimeManager.Start();
+            noteDataLoader.Load(musicScoreId);
         }
 
         public void StageEnd()
@@ -25,12 +26,12 @@ namespace Ringtone.Managers
             stageTimeManager.Reset();
         }
 
-        public void StagePause()
+        public void StageReset()
         {
             
         }
 
-        public void CreateNotesData()
+        public void StagePause()
         {
             
         }

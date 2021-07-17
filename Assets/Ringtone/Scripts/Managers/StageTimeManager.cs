@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Ringtone.Managers.Internal
+namespace Ringtone.Scripts.Managers
 {
     public interface IStageTimeManager
     {
