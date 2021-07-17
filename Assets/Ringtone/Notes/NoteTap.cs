@@ -12,7 +12,14 @@ namespace Ringtone.Notes
     {
         public override void Judge()
         {
-            isJudge.Value = Rank.Perfect;
+            // TODO:節で判定
+            // ひとまず単純な時間差で判定
+            float subTime = touchTime - startTime;
+            
+            // touchTimeがどれくらいjudgeTimeに離れているか？
+            float judgeSubTime = Mathf.Abs(judgeTime - subTime);
+
+            isJudge.Value = GetRank(judgeSubTime);
             Destroy(gameObject);
         }
     }

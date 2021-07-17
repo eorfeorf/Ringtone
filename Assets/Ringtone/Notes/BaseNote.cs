@@ -19,8 +19,13 @@ namespace Ringtone.Notes
         public IReadOnlyReactiveProperty<Judge.Rank> IsJudge => isJudge;
         protected readonly ReactiveProperty<Rank> isJudge = new ReactiveProperty<Rank>();
         
-        public Type Type => type;
-        private Type type;
+        // ノーツタイプ
+        protected Type type;
+        // 判定タイミング
+        protected float judgeTime;
+        // タップしたタイミング
+        protected float touchTime;
+        protected float startTime; // 決定論だとpauseに対応できない？
 
         private void Awake()
         {
@@ -33,9 +38,11 @@ namespace Ringtone.Notes
             }).AddTo(this);
         }
 
-        public void Initialize(Type type)
+        public void Initialize(Type type, float judgeTime, float startTime)
         {
             this.type = type;
+            this.judgeTime = judgeTime;
+            this.startTime = startTime;
         }
         
         public virtual void Judge()
@@ -51,6 +58,35 @@ namespace Ringtone.Notes
         public void Untouch()
         {
             isTouch.Value = false;
+        }
+        
+        protected Rank GetRank(float judgeSubTime)
+        {
+            // 差分の大きさでランクを決める
+            // TODO:差分のテーブルを定義
+            // TODO:正しい１フレームの時間を取得する
+            float oneFrame = 1f / 60f;
+
+            if (judgeSubTime < oneFrame * 2)
+            {
+                return Rank.Perfect;
+            }
+            else if (judgeSubTime < oneFrame * 4)
+            {
+                return Rank.Great;
+            }
+            else if (judgeSubTime < oneFrame * 6)
+            {
+                return Rank.Good;
+            }
+            else if (judgeSubTime < oneFrame * 8)
+            {
+                return Rank.Bad;
+            }
+            else
+            {
+                return Rank.Miss;
+            }
         }
     }
 }
