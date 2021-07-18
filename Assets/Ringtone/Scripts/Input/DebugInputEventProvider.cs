@@ -1,9 +1,7 @@
-﻿using System;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-namespace Ringtone.Input
+namespace Ringtone.Scripts.Input
 {
     /// <summary>
     /// デバッグ入力を検出して座標をイベントに流すクラス。

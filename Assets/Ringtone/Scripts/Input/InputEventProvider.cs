@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UniRx;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Ringtone.Input
+namespace Ringtone.Scripts.Input
 {
     public class InputEventProvider : MonoBehaviour
     {

@@ -1,3 +1,17 @@
 {
-	"name": "Ringtone.MusicScore"
+    "name": "Ringtone.MusicScore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d8c476551277812469f974b76058e0ce",
+        "GUID:58317bca75654e3428390eb48225f433"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

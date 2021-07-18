@@ -2,6 +2,8 @@
     "name": "Ringtone.Managers.StageManager",
     "rootNamespace": "",
     "references": [
+        "GUID:d8c476551277812469f974b76058e0ce",
+        "GUID:58317bca75654e3428390eb48225f433",
         "GUID:2bc5beaac9cf23b4e94ee79cb4702ed0"
     ],
     "includePlatforms": [],

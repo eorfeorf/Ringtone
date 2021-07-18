@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Ringtone.Judge;
+using Ringtone.Scripts.Notes;
 using UnityEngine;
 
 namespace Ringtone.Notes

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Ringtone.Judge;
 using Ringtone.Notes;
+using Ringtone.Scripts.Notes;
 using UniRx;
 using UnityEngine;
 using UnityEngine.Assertions;

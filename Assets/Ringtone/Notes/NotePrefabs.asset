@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NotePrefabs
   m_EditorClassIdentifier: 
   Notes:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8182451962934729621, guid: ab601f976b7addc42bb1276a21af6bb1, type: 3}
+  - {fileID: 5952094980127432959, guid: f93fc6dacfb934c448761ddc10de44d7, type: 3}

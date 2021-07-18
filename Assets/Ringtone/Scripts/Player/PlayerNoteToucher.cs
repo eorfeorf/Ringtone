@@ -1,5 +1,5 @@
 ﻿using System;
-using Ringtone.Input;
+using Ringtone.Scripts.Input;
 using Ringtone.Touch;
 using UniRx;
 using UnityEngine;

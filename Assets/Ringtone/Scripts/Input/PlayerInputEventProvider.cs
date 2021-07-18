@@ -1,8 +1,7 @@
-﻿using System;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
 
-namespace Ringtone.Input
+namespace Ringtone.Scripts.Input
 {
     public class PlayerInputEventProvider : MonoBehaviour, IInputEventProvider
     {

@@ -1,8 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-
-namespace Ringtone.Input
+namespace Ringtone.Scripts.Input
 {
     public interface IInputEventProvider
     {

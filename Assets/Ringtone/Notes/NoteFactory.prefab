@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15357971addf41245be2101e0b7e2460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notes:
-  - {fileID: 8182451962934729621, guid: ab601f976b7addc42bb1276a21af6bb1, type: 3}
-  - {fileID: 5952094980127432959, guid: f93fc6dacfb934c448761ddc10de44d7, type: 3}
+  notePrefabs: {fileID: 11400000, guid: 18c151260bf4d8f45a85eae17b531266, type: 2}
+  notePrefabsTap: {fileID: 8182451962934729621, guid: ab601f976b7addc42bb1276a21af6bb1,
+    type: 3}

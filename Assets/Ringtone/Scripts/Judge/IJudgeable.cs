@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UniRx;
-using UnityEngine;
+﻿using UniRx;
 
-
-namespace Ringtone.Judge
+namespace Ringtone.Scripts.Judge
 {
     /// <summary>
     /// 判定を行うインターフェイス。

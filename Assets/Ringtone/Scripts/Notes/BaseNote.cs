@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Ringtone.Judge;
+using Ringtone.Scripts.Judge;
 using Ringtone.Touch;
 using UniRx;
 using UnityEngine;
+using Type = Ringtone.Notes.Type;
 
-namespace Ringtone.Notes
+namespace Ringtone.Scripts.Notes
 {
     /// <summary>
     /// 
@@ -15,9 +14,10 @@ namespace Ringtone.Notes
     {
         public IReadOnlyReactiveProperty<bool> IsTouch => isTouch;
         private readonly ReactiveProperty<bool> isTouch = new ReactiveProperty<bool>();
-        
-        public IReadOnlyReactiveProperty<Judge.Rank> IsJudge => isJudge;
+        public IReadOnlyReactiveProperty<Rank> IsJudge => isJudge;
         protected readonly ReactiveProperty<Rank> isJudge = new ReactiveProperty<Rank>();
+
+        public int Id => id;
         
         // ノーツタイプ
         protected Type type;
@@ -26,6 +26,8 @@ namespace Ringtone.Notes
         // タップしたタイミング
         protected float touchTime;
         protected float startTime; // 決定論だとpauseに対応できない？
+
+        protected int id;
 
         private void Awake()
         {
@@ -38,11 +40,12 @@ namespace Ringtone.Notes
             }).AddTo(this);
         }
 
-        public void Initialize(Type type, float judgeTime, float startTime)
+        public void Initialize(Type type, float judgeTime, float startTime, int id)
         {
             this.type = type;
             this.judgeTime = judgeTime;
             this.startTime = startTime;
+            this.id = id;
         }
         
         public virtual void Judge()
